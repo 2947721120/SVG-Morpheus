@@ -19,8 +19,8 @@ CDN提供的 [cdnjs](https://cdnjs.com/libraries/SVG-Morpheus)
 
 您有以下选项来安装库:
 - [Download SVG Morpheus](https://github.com/alexk111/SVG-Morpheus/archive/master.zip) from GitHub.
-- Use NPM `npm install svg-morpheus`.
-- Use Bower `bower install svg-morpheus`.
+- 使用 NPM `npm install svg-morpheus`.
+- 使用 Bower `bower install svg-morpheus`.
 
 ### 添加脚本
 
@@ -33,13 +33,13 @@ CDN提供的 [cdnjs](https://cdnjs.com/libraries/SVG-Morpheus)
 ## 使用
 
 1. 一个图标集SVG添加到HTML文件，你要显示的图标变形.
-2. 通过调用设置图标创建SVG睡眠实例 `new SVGMorpheus(element)`. *Object/IFrame/Inline SVG element containing the icon set. Can be a DOM element or a CSS query selector.*. For example:
+2. 通过调用设置图标创建SVG睡眠实例 `new SVGMorpheus(element)`. *Object/IFrame/Inline SVG element containing the icon set. Can be a DOM element or a CSS query selector.*. 例如：
 
 ```javascript
 var myIcons = new SVGMorpheus('#myIconSet');
 ```
 
-3. After initializing, you get a SVGMorpheus object having `to(ID)` function. *ID is an id of Icon in the icon set*. Use it to morph the icon to another icon in the icon set.
+3. 初始化后，你会得到有一个SVGMorpheus对象 `to(ID)` function. *ID 图标是在图标设置ID*. 使用它可以变身的图标集图标到另一个图标.
 
 ```javascript
 myIcons.to('icon1');
@@ -48,7 +48,7 @@ myIcons.to('icon1');
 
 ## Functions
 
-### SVGMorpheus Constructor
+### SVGMorpheus 构造函数
 
 创建SVGMorpheus实例.
 
@@ -56,64 +56,64 @@ myIcons.to('icon1');
 var myIcons = new SVGMorpheus(element, options, callback);
 ```
 
-**element** - Object/IFrame/SVG element containing an icon set. Can be a DOM element or a CSS query selector.
+**element** - 包含图标集对象/ IFRAME / SVG元素。可以是一个DOM元素或CSS选择器查询.
 
-**options** - *Optional*. Object specifying default options.
+**options** - *Optional*. 对象，指定默认选项.
 
-**options.iconId** - *Optional*. Id of an icon shown after initialization. Default: last icon in the icon set.
+**options.iconId** - *Optional*. 初始化之后显示的图标的ID。默认值：在图标集最后一个图标.
 
-**options.duration** - *Optional*. Set a default duration for transition animations, in msec. Default: 750.
+**options.duration** - *Optional*. 设置过渡动画默认持续时间，以毫秒为单位。 默认: 750.
 
-**options.easing** - *Optional*. Set a default easing for transition animations. Default: quad-in-out.
+**options.easing** - *Optional*. 设置默认为缓解过渡动画。 默认: quad-in-out(四中出).
 
-**options.rotation** - *Optional*. Set a default rotation for icon shapes. `clock` = clockwise, `counterclock` = counterclockwise, `random` = randomly set clock/counterclock, `none` = no rotation. Default: clock.
+**options.rotation** - *Optional*. 设置图标形状的默认旋转. `clock` = 顺时针, `counterclock` = 逆时针, `random` = 随机设置顺时针/逆时针, `none` = 没有旋转. 默认: 顺时针.
 
-**callback** - *Optional*. Set a default callback function to call at the animation end.
+**callback** - *Optional*. 设置默认的回调函数在动画结束时调用.
 
 
 ### SVGMorpheus.to()
 
-Morphs the icon to another one.
+摇身一变图标到另一个.
 
 ```javascript
 myIcons.to(iconId, options, callback);
 ```
 
-**iconId** - Id of an icon to transition to.
+**iconId** - 图标的ID过渡到.
 
-**options** - *Optional*. Object specifying the animation options.
+**options** - *Optional*. 对象，指定的动画选项.
 
-**options.duration** - *Optional*. Set a duration for the animation, in msec.
+**options.duration** - *Optional*. 设定的期限为动画，以毫秒为单位.
 
-**options.easing** - *Optional*. Set an easing for the animation.
+**options.easing** - *Optional*. 设置一个宽松的动画.
 
-**options.rotation** - *Optional*. Set a rotation for icon shapes. `clock` = clockwise, `counterclock` = counterclockwise, `random` = randomly set clock/counterclock, `none` = no rotation.
+**options.rotation** - *Optional*. 设置图标形状的旋转. `clock` = 顺时针, `counterclock` = 逆时针, `random` = 随机设置顺时针/逆时针, `none` = 没有旋转.
 
-**callback** - *Optional*. Set a callback function to call at the animation end.
+**callback** - *Optional*. 设置一个回调函数在动画结束时调用.
 
 ### SVGMorpheus.registerEasing()
 
-Registers a custom easing function. SVGMorpheus has a set of predefined easing functions for the morph animation (goes below). If you want to use your own easing, use this function to do that.
+注册一个自定义缓动函数。SVGMorpheus有一整套的变形动画预定义的宽松功能（如下行）。如果你想使用自己的宽松政策，使用该功能来做到这一点。
 
 ```javascript
 myIcons.registerEasing(name, fn);
 ```
 
-**name** - Name of an easing function you want to register.
+**name** - 缓动函数的名称要注册.
 
-**fn** - Easing function. ```function easing(timing)``` gets a float ```0<=timing<=1``` argument as an input, and outputs float ```0<=progress<=1```.
+**fn** - 缓动功能. ```function easing(timing)``` 得到一个浮点数 ```0<=timing<=1``` 参数作为输入，并输出浮动 ```0<=progress<=1```.
 
-## Predefined easing functions
+## 预定义功能宽松
 
 `circ-in`, `circ-out`, `circ-in-out`, `cubic-in`, `cubic-out`, `cubic-in-out`, `elastic-in`, `elastic-out`, `elastic-in-out`, `expo-in`, `expo-out`, `expo-in-out`, `linear`, `quad-in`, `quad-out`, `quad-in-out`, `quart-in`, `quart-out`, `quart-in-out`, `quint-in`, `quint-out`, `quint-in-out`, `sine-in`, `sine-out`, `sine-in-out`
 
 
-## Icon Set structure
+## 图标集结构
 
-SVG should have the following structure to be a valid icon set:
+SVG应具有以下结构是有效的图标集:
 
-- 1st tier nodes are `<g>` elements having 'id' attribute. They define icons in the icon set.
-- 2nd tier nodes are shape elements (`<path>`, `circle`, `rect`, `ellipse`, `polygon`, `line`). They define the icon graphics.
+- 1st层节点 `<g>` 有“id”属性的元素。他们中的图标集定义图标.
+- 2nd层节点是造型元素 (`<path>`, `circle`, `rect`, `ellipse`, `polygon`, `line`). 他们定义的图标图形.
 
 ```xml
 <svg>
@@ -134,16 +134,16 @@ SVG should have the following structure to be a valid icon set:
 
 ## 支持的浏览器
 
-Chrome
-Firefox
-IE >= 10
-Safari
-Opera
-iOS Safari
-Android Browser >= 4.4
-Chrome for Android
+铬
+火狐
+IE>= 10
+苹果浏览器
+歌剧
+iOS的Safari浏览器
+Android浏览器>=4.4
+Android版Chrome
 
 
-## License
+## 执照
 
-See the [LICENSE](https://github.com/alexk111/SVG-Morpheus/blob/master/LICENSE) file.
+查看 [LICENSE](https://github.com/alexk111/SVG-Morpheus/blob/master/LICENSE) 文件.
