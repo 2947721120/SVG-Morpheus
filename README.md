@@ -1,39 +1,39 @@
 # SVG Morpheus
 
-JavaScript library enabling SVG icons to morph from one to the other. It implements Material Design's [Delightful Details](http://www.google.com/design/spec/animation/delightful-details.html) transitions.
+JavaScript库使SVG图标从一个到另一个变形。它实现材料设计的 [Delightful Details](http://www.google.com/design/spec/animation/delightful-details.html) transitions.
 
-## Live demo
+## 现场演示
 
-[Launch Live Demo](http://alexk111.github.io/SVG-Morpheus/)
+[启动现场演示](http://alexk111.github.io/SVG-Morpheus/)
 
-## Installing
+## 安装
 
-### Using SVG Morpheus with a CDN
+### 使用SVG睡眠用 CDN
 
-CDN provided by [cdnjs](https://cdnjs.com/libraries/SVG-Morpheus)
+CDN提供的 [cdnjs](https://cdnjs.com/libraries/SVG-Morpheus)
 ```
-<script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
+<script src="//cdnjs.c2cbc.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
 ```
 
-### Download
+### 下载
 
-You have the following options to install the library:
+您有以下选项来安装库:
 - [Download SVG Morpheus](https://github.com/alexk111/SVG-Morpheus/archive/master.zip) from GitHub.
 - Use NPM `npm install svg-morpheus`.
 - Use Bower `bower install svg-morpheus`.
 
-### Add Script
+### 添加脚本
 
-Simply add the svg-morpheus.js script to your website/application. No other scripts are needed. Both the minified and uncompressed (for development) versions are in the /compile folder.
+只需将SVG-morpheus.js脚本添加到您的网站/应用。不需要进行其他的脚本。无论是精缩和未压缩的（发展）的版本在/编译文件夹.
 
 ```html
 <script src="svg-morpheus.js"></script>
 ```
 
-## Usage
+## 使用
 
-1. Add an icon set SVG to the HTML file where you want to show the morphing icon.
-2. Create a SVG Morpheus instance for the icon set by calling `new SVGMorpheus(element)`. *Object/IFrame/Inline SVG element containing the icon set. Can be a DOM element or a CSS query selector.*. For example:
+1. 一个图标集SVG添加到HTML文件，你要显示的图标变形.
+2. 通过调用设置图标创建SVG睡眠实例 `new SVGMorpheus(element)`. *Object/IFrame/Inline SVG element containing the icon set. Can be a DOM element or a CSS query selector.*. For example:
 
 ```javascript
 var myIcons = new SVGMorpheus('#myIconSet');
@@ -50,7 +50,7 @@ myIcons.to('icon1');
 
 ### SVGMorpheus Constructor
 
-Creates a SVGMorpheus instance.
+创建SVGMorpheus实例.
 
 ```javascript
 var myIcons = new SVGMorpheus(element, options, callback);
@@ -127,12 +127,12 @@ SVG should have the following structure to be a valid icon set:
 ```
 
 
-## Example code
+## 示例代码
 
-Check the Demos directory for examples.
+检查的例子Demos目录.
 
 
-## Supported browsers
+## 支持的浏览器
 
 Chrome
 Firefox

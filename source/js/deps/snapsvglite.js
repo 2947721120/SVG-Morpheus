@@ -1,5 +1,5 @@
 /*
- * Useful things from Adobe's Snap.svg adopted to the library needs
+ *从Adobe Snap.svg有用的东西通过了对库需求
  */
 
 'use strict';
@@ -13,7 +13,7 @@ var spaces = "\x09\x0a\x0b\x0c\x0d\x20\xa0\u1680\u180e\u2000\u2001\u2002\u2003\u
 var pathCommand = new RegExp("([a-z])[" + spaces + ",]*((-?\\d*\\.?\\d*(?:e[\\-+]?\\d+)?[" + spaces + "]*,?[" + spaces + "]*)+)", "ig");
 var pathValues = new RegExp("(-?\\d*\\.?\\d*(?:e[\\-+]?\\d+)?)[" + spaces + "]*,?[" + spaces + "]*", "ig");
 
-// Parses given path string into an array of arrays of path segments
+// 解析给定的路径字符串转换成路径段的数组的数组
 var parsePathString = function (pathString) {
   if (!pathString) {
     return null;
@@ -258,7 +258,7 @@ var q2c = function(x1, y1, ax, ay, x2, y2) {
       ];
 };
 var a2c = function(x1, y1, rx, ry, angle, large_arc_flag, sweep_flag, x2, y2, recursive) {
-  // for more information of where this math came from visit:
+  // 对于这个在哪里从数学来访问信息:
   // http://www.w3.org/TR/SVG11/implnote.html#ArcImplementationNotes
   var _120 = Math.PI * 120 / 180,
       rad = Math.PI / 180 * (+angle || 0),

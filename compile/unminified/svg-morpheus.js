@@ -84,13 +84,13 @@ easings['sine-in-out']=function (t) {
 
 
 /*
- * Helper functions
+ * 辅助功能
  */
 
 var _reqAnimFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.oRequestAnimationFrame;
 var _cancelAnimFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.oCancelAnimationFrame;
 
-// Calculate style
+//计算式
 function styleNormCalc(styleNormFrom, styleNormTo, progress) {
   var i, len, styleNorm={};
   for(i in styleNormFrom) {
@@ -182,7 +182,7 @@ function styleToNorm(styleFrom, styleTo) {
   return styleNorm;
 }
 
-// Calculate transform progress
+//计算变换过程
 function transCalc(transFrom, transTo, progress) {
   var res={};
   for(var i in transFrom) {
@@ -206,7 +206,7 @@ function trans2string(trans) {
   return res;
 }
 
-// Calculate curve progress
+//计算曲线的进展
 function curveCalc(curveFrom, curveTo, progress) {
   var curve=[];
   for(var i=0,len1=curveFrom.length;i<len1;i++) {
@@ -221,7 +221,7 @@ function curveCalc(curveFrom, curveTo, progress) {
 function clone(obj) {
   var copy;
 
-  // Handle Array
+  // 处理阵列
   if (obj instanceof Array) {
     copy = [];
     for (var i = 0, len = obj.length; i < len; i++) {
@@ -230,7 +230,7 @@ function clone(obj) {
     return copy;
   }
 
-  // Handle Object
+  // 处理对象
   if (obj instanceof Object) {
     copy = {};
     for (var attr in obj) {
