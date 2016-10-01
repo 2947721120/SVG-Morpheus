@@ -7,7 +7,7 @@ window.onload = function () {
       selDuration = document.getElementById('selDuration'),
       selRotation = document.getElementById('selRotation'),
       icons={
-        '3d_rotation':'3D Rotation',
+        '3d_rotation':'3d rotation',
         'accessibility':'Accessibility',
         'account_balance':'Account Balance',
         'account_box':'Account Box',

@@ -11,7 +11,7 @@
 'use strict';
 
 /*
- * Easing functions
+ * 缓动函数
  */
 
 var easings={};

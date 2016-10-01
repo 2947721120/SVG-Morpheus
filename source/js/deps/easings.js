@@ -1,5 +1,5 @@
 /*
- * Easing functions
+ * 缓动函数
  */
 
 'use strict';
